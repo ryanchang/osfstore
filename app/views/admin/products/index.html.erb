@@ -9,10 +9,15 @@
 	<div class="list-group">
 		<% Product.all.each do |product| %>
 	 	<a class="list-group-item" href="/admin/products/<%= product.id %>">
-	 		<h4 class="list-group-item-heading">
-		 		<span><%= product.name %></span>
-		 		<span>产品数: <%= product.desc %></span>
-		 	</h4>
+	 		<div class="image">
+		 		<img src="/images/<%= product.id.to_s %>.jpg">
+	 		</div>
+	 		<div class="info">
+		 		<h4 class="list-group-item-heading">
+			 		<h4><%= product.name %></h4>
+			 		<span><%= product.desc %></span>
+			 	</h4>
+		 	</div>
 	 	</a>		 
 		<% end %>
 	</div>
@@ -21,10 +26,21 @@
       <div class="panel-body">
 		<%= form_for :product, url:admin_products_path do |f| %>
 		  <p>
-		    <%= f.label "产品名称" %><br>
-		    <%= f.text_field :name %>			    
+		    <%= f.label "名称" %><br>
+		    <%= f.text_field :name %>	
 		  </p>
-		 
+		  <p>
+  		    <%= f.label "描述" %><br>
+		    <%= f.text_area :desc %>
+		  </p>
+		  <p>
+  		    <%= f.label "价格" %><br>
+		    <%= f.text_field :price %>
+		  </p>		  
+		  <p>
+  		    <%= f.label "图片" %><br>
+		    <%= f.file_field :image %>
+		  </p>		  
 		  <p>
 		    <%= f.submit "提交" %>
 		  </p>

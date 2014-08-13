@@ -1,3 +1,7 @@
 // Place all the styles related to the admin::products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image {width: 20%; display: inline-block;}
+.image img {width: 100%; overflow: hidden;}
+.info {width: 70%; display: inline-block;}

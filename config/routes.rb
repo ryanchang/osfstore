@@ -17,6 +17,11 @@ Rails.application.routes.draw do
     resources :products
   end  
 
+  namespace :admin do
+    root 'products#index'
+    resources :products
+  end
+
   # Example resource route with options:
   #   resources :products do
   #     member do

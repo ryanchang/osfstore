@@ -66,7 +66,7 @@
 
 **Parameters**: None
 
-**NOTE:** The image of specific product can be found at /images/<product_id>.jpg
+**NOTE:** The image of specific product can be found at /images/[product_id].jpg
 
 Example:
 ```json

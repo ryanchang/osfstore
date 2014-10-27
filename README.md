@@ -60,11 +60,13 @@
 #### Product Details
 **Description:** Get detailed information of a specified product.
 
-URL: /api/products/id
+**URL**: /api/products/id
 
-Method: GET
+**Method**: GET
 
-Parameters: None
+**Parameters**: None
+
+**NOTE:** The image of specific product can be found at /images/<product_id>.jpg
 
 Example:
 ```json
